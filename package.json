@@ -15,11 +15,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/cli-table": "^0.3.0",
     "@types/fs-extra": "^9.0.13",
     "@types/git-clone": "^0.2.0",
     "@types/inquirer": "^8.2.1",
     "@types/shelljs": "^0.8.11",
     "await-spawn": "^4.0.1",
+    "cli-table": "^0.3.11",
     "commander": "^9.1.0",
     "fs-extra": "^10.0.1",
     "git-clone": "^0.2.0",
