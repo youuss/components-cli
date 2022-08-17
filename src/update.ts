@@ -8,6 +8,9 @@ export const updateVue2Components = () => {
   return new Promise((resolve, reject) => {
     try {
       loading.start('start update components');
+      if (!fs.existsSync(path.join(__dirname, '../components-lib'))) {
+        shell.exec(`mkdir ${path.join(__dirname, '../components-lib')}`)
+      }
       shell.cd(path.join(__dirname, '../components-lib'))
       shell.exec('rm -rf .git')
       const updateFiles = () => {
