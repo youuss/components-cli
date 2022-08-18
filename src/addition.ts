@@ -6,6 +6,9 @@ export const addComponents = (components: string[], _pPath: string) => {
   return new Promise((resolve, reject) => {
     try {
       const pwd = shell.pwd()
+      if (!fs.existsSync(`${pwd}/src/components`)) {
+        fs.mkdirSync(`${pwd}/src/components`)
+      }
       components.forEach(c => {
         const _isFile = fs.statSync(`${_pPath}/${c}`).isFile();
         if (_isFile) {
