@@ -2,16 +2,17 @@
 
 import { Command } from 'commander';
 import inquirer from 'inquirer';
+import Table from 'cli-table'
 import { asyncComponentsFromRemote } from './update';
 import { listAllComponents, listAllTemplates } from './list';
-import Table from 'cli-table'
+import { addComponents } from './addition';
 
 const program = new Command();
 
 const InitPrompts = [
   {
     type: 'list',
-    message: '🎈请选择当前开发的框架',
+    message: '🎈 请选择当前开发的框架',
     name: 'type',
     choices: [
       'vue2',
@@ -74,9 +75,9 @@ program
       })
     })
     table.push(...rows);
-  
+
     console.log(table.toString());
-  
+
   })
 
 program
@@ -89,12 +90,12 @@ program
       {
         type: 'checkbox',
         name: 'components',
-        message: `✨${type}下共有${componentsConfig[type].components.length}个组件，请选择需要添加的组件`,
+        message: `✨ ${type}下共有${componentsConfig[type].components.length}个组件，请选择需要添加的组件`,
         choices: componentsConfig[type].components
       }
     ]
     const { components } = await inquirer.prompt(ComponentsPrompt);
-    console.log(components)
+    await addComponents(components, componentsConfig[type].path)
   })
 
 program.parse();
