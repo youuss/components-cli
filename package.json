@@ -1,5 +1,5 @@
 {
-  "name": "components-cli",
+  "name": "@youus/components-cli",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",

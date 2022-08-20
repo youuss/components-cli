@@ -24,7 +24,7 @@ const InitPrompts = [
 program
   .name('components-cli')
   .description('vue2 + vue3 components generator')
-  .version('0.0.1');
+  .version('1.0.0');
 
 program
   .command('async')
