@@ -16,7 +16,7 @@ export const addComponents = (components: string[], _pPath: string) => {
         } else {
           const _aimFiles = fs.readdirSync(`${_pPath}/${c}`)
           try {
-            fs.mkdirSync(`${pwd}/src/components/${c}`, 777)
+            fs.mkdirSync(`${pwd}/src/components/${c}`)
           } catch (e) {
             console.info(`${c}目录已经建立`)
           }
