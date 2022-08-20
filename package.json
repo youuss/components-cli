@@ -6,6 +6,9 @@
   "bin": {
     "coc": "dist/index.js"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "dev": "tsc && node dist/index.js",
     "build": "tsc",
