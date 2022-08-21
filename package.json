@@ -1,7 +1,7 @@
 {
   "name": "@youus/components-cli",
   "version": "1.0.1",
-  "description": "",
+  "description": "vue2 + vue3 components generator",
   "main": "dist/index.js",
   "bin": {
     "coc": "dist/index.js"
@@ -15,8 +15,12 @@
     "lint": "eslint --ext .js .",
     "lint:fix": "eslint --fix --ext .js ."
   },
-  "author": "",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/youuss/components-cli.git"
+  },
+  "author": "youus",
   "dependencies": {
     "@types/cli-table": "^0.3.0",
     "@types/fs-extra": "^9.0.13",

@@ -3,6 +3,7 @@
 import { Command } from 'commander';
 import inquirer from 'inquirer';
 import Table from 'cli-table'
+import pkg from '../package.json';
 import { asyncComponentsFromRemote } from './update';
 import { listAllComponents, listAllTemplates } from './list';
 import { addComponents } from './addition';
@@ -22,9 +23,9 @@ const InitPrompts = [
 ]
 
 program
-  .name('components-cli')
-  .description('vue2 + vue3 components generator')
-  .version('1.0.0');
+  .name(pkg.name)
+  .description(pkg.description)
+  .version(pkg.version);
 
 program
   .command('async')
